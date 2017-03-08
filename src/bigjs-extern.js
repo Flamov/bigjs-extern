@@ -4,41 +4,34 @@
  * @externs
 */
 
-/* Constructor */
-
 /**
  * @constructor
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
-var Big = function Big(arg1) {};
+var Big = function(arg1) {};
 
-/* Constructor: Properties */
+/** @type {!Array<number>} */
+Big.prototype.c;
 
-/**
- * @type {number}
- */
-Big.DP;
+/** @type {number} */
+Big.prototype.e;
 
-/**
- * @type {number}
- */
-Big.RM;
+/** @type {number} */
+Big.prototype.s;
 
-/**
- * @type {number}
- */
-Big.E_NEG;
+/** @type {number} */
+Big.prototype.DP;
 
-/**
- * @type {number}
- */
-Big.E_POS;
+/** @type {number} */
+Big.prototype.RM;
 
-/* Instance */
+/** @type {number} */
+Big.prototype.E_NEG;
 
-/* Instance: Methods */
+/** @type {number} */
+Big.prototype.E_POS;
 
 /**
  * @returns {!Big}
@@ -47,63 +40,63 @@ Big.E_POS;
 Big.prototype.abs = function() {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
 Big.prototype.cmp = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
 Big.prototype.div = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {boolean}
  * @nosideeffects
  */
 Big.prototype.eq = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {boolean}
  * @nosideeffects
  */
 Big.prototype.gt = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {boolean}
  * @nosideeffects
  */
 Big.prototype.gte = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {boolean}
  * @nosideeffects
  */
 Big.prototype.lte = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
 Big.prototype.minus = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
 Big.prototype.mod = function(arg1) {};
 
 /**
- * @param {number|string|!Big} arg1
+ * @param {(number|string|!Big)} arg1
  * @returns {!Big}
  * @nosideeffects
  */
@@ -117,8 +110,8 @@ Big.prototype.plus = function(arg1) {};
 Big.prototype.pow = function(arg1) {};
 
 /**
- * @param {number} arg1
- * @param {number} arg2
+ * @param {?number=} arg1
+ * @param {?number=} arg2
  * @returns {!Big}
  * @nosideeffects
  */
@@ -175,20 +168,3 @@ Big.prototype.valueOf = function() {};
  * @nosideeffects
  */
 Big.prototype.toJSON = function() {};
-
-/* Instance: Properties */
-
-/**
- * @type {Array}
- */
-Big.c;
-
-/**
- * @type {number}
- */
-Big.e;
-
-/**
- * @type {number}
- */
-Big.s;
